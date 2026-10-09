@@ -185,6 +185,8 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 }
 
 .nav-logo {
+  white-space: nowrap;
+  flex-shrink: 0;
   display: inline-flex;
   align-items: center;
   gap: 10px;
@@ -1112,6 +1114,7 @@ section {
 }
 
 .github-cta {
+  margin-top: 20px;
   display: flex;
   align-items: center;
   gap: 18px;
@@ -1705,6 +1708,40 @@ section {
   border: 1px solid var(--border);
 }
 
+/* "View more" lists */
+.is-collapsed { display: none !important; }
+
+.view-more-wrap {
+  display: flex;
+  justify-content: center;
+  margin-top: 24px;
+}
+.view-more i { font-size: .75rem; }
+
+/* Experience bullets (inside timeline cards) */
+.exp-points {
+  list-style: none;
+  display: grid;
+  gap: 8px;
+}
+.exp-points li {
+  position: relative;
+  padding-left: 22px;
+  color: var(--text-2);
+  line-height: 1.7;
+}
+.exp-points li::before {
+  content: '';
+  position: absolute;
+  left: 2px;
+  top: .72em;
+  width: 7px;
+  height: 7px;
+  border-radius: 2px;
+  background: var(--accent);
+  transform: rotate(45deg);
+}
+
 /* ---------- References ---------- */
 .ref-grid {
   display: grid;
@@ -1907,6 +1944,10 @@ footer {
   .cp-grid { grid-template-columns: repeat(2, 1fr); }
   .contest-grid { grid-template-columns: repeat(2, 1fr); }
   .nav-menu a { padding: 8px 9px; font-size: .86rem; }
+}
+
+@media (min-width: 961px) and (max-width: 1180px) {
+  #navbar .logo-text { display: none; }
 }
 
 @media (max-width: 960px) {

@@ -185,6 +185,42 @@
     document.querySelectorAll('[data-count]').forEach((el) => observer.observe(el));
   }
 
+  /* ---------- "View more" for long lists ---------- */
+  // Any container with data-collapse="N" shows its first N items and hides the rest behind a toggle.
+  function initCollapsibleLists() {
+    document.querySelectorAll('[data-collapse]').forEach((list, index) => {
+      const limit = parseInt(list.dataset.collapse, 10) || 3;
+      const extra = Array.from(list.children).slice(limit);
+      if (extra.length === 0) return;
+
+      if (!list.id) list.id = `collapsible-${index}`;
+      const button = document.createElement('button');
+      button.type = 'button';
+      button.className = 'btn btn-secondary view-more';
+      button.setAttribute('aria-controls', list.id);
+
+      function render(expanded) {
+        extra.forEach((item) => item.classList.toggle('is-collapsed', !expanded));
+        button.setAttribute('aria-expanded', String(expanded));
+        button.innerHTML = expanded
+          ? 'Show less <i class="fas fa-chevron-up"></i>'
+          : `View more (${extra.length}) <i class="fas fa-chevron-down"></i>`;
+      }
+
+      button.addEventListener('click', () => {
+        const expanded = button.getAttribute('aria-expanded') !== 'true';
+        render(expanded);
+        if (!expanded) list.scrollIntoView({ behavior: scrollBehavior, block: 'start' });
+      });
+
+      render(false);
+      const wrap = document.createElement('div');
+      wrap.className = 'view-more-wrap';
+      wrap.appendChild(button);
+      list.after(wrap);
+    });
+  }
+
   /* ---------- Init ---------- */
   initMobileNav();
   initTheme();
@@ -193,6 +229,7 @@
   initActiveNav();
   initReveal();
   initCounters();
+  initCollapsibleLists();
 
   console.log('%cWelcome to my portfolio! 🚀', 'font-size: 20px; color: #10b981; font-weight: bold;');
   console.log('%cInterested in AI agents and LLM systems? Let\'s connect!', 'font-size: 14px; color: #0d9488;');
