@@ -1,7 +1,7 @@
 # Md. Din Islam — Portfolio
 
 Personal portfolio site, served with GitHub Pages:
-https://md-dinislam.github.io/md-din-islam/
+https://md-dinislam.github.io/mddinislam/
 
 Plain HTML, CSS and JavaScript — no build step.
 
