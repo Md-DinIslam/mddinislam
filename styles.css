@@ -197,6 +197,18 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
   color: var(--text);
 }
 
+.logo-text {
+  font-family: 'Great Vibes', 'Segoe Script', cursive;
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: 0;
+  padding: 4px 2px 0;
+  color: var(--text);
+  transition: color .2s var(--ease);
+}
+.nav-logo:hover .logo-text { color: var(--accent); }
+
 .logo-mark {
   display: grid;
   place-items: center;
@@ -2017,7 +2029,11 @@ footer {
 }
 
 @media (min-width: 961px) and (max-width: 1180px) {
-  #navbar .logo-text { display: none; }
+  #navbar .logo-text { font-size: 1.6rem; }
+  .nav-container { gap: 14px; }
+  .nav-menu a { padding: 8px 7px; font-size: .84rem; }
+  .nav-actions { gap: 8px; }
+  .nav-resume { padding: 8px 12px; }
 }
 
 @media (max-width: 960px) {
