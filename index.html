@@ -13,12 +13,12 @@
         content="ICPC Asia Dhaka Regionalist | Competitive Programmer | AI/ML-Focused CS Student">
     <meta property="og:image" content="images/dinislam.jpg">
 
-    <!-- Apply saved / system theme before paint to avoid a flash -->
+    <!-- Apply saved theme before paint to avoid a flash (dark by default) -->
     <script>
         (function () {
             var t = null;
             try { t = localStorage.getItem('theme'); } catch (e) { }
-            if (!t) t = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+            if (t !== 'light') t = 'dark';
             document.documentElement.setAttribute('data-theme', t);
             document.documentElement.classList.add('js');
         })();
@@ -888,6 +888,27 @@
 
             <h3 class="sub-title reveal"><i class="fas fa-trophy"></i> Contest Achievements</h3>
 
+            <!-- Highlighted result: IDPC 2024 (with award photo) -->
+            <article class="contest-feature reveal">
+                <a class="feature-photo" href="images/idpc-2024-4th-runner-up.jpg" target="_blank" rel="noopener"
+                    aria-label="Open the IDPC 2024 award photo in full size">
+                    <img src="images/idpc-2024-4th-runner-up.jpg" width="1400" height="933" loading="lazy"
+                        alt="Md. Din Islam receiving the 4th Runner-Up award at the Inter Department Programming Contest (IDPC), GUB CSE Carnival 2024">
+                </a>
+                <div class="feature-body">
+                    <span class="feature-badge"><i class="fas fa-medal"></i> Award Winner</span>
+                    <h4 class="feature-rank">4th Runner-Up</h4>
+                    <p class="feature-name">Inter Department Programming Contest <strong>(IDPC)</strong> at GUB</p>
+                    <p class="feature-note">Received the award on stage at the GUB CSE Carnival 2024.</p>
+                    <div class="contest-foot">
+                        <span class="contest-year">2024</span>
+                        <a href="https://www.facebook.com/GreenUniversityComputerClub/posts/pfbid0QHKVGJ1cY4znjg3FUEq7WfGzxauF6ZnUdMCkgWx8FZHvcMwZkJm2cGv7VdayijBkl?rdid=4ktN1T82XFGv5V2G#" target="_blank" rel="noopener">
+                            View Facebook Post <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </div>
+                </div>
+            </article>
+
             <!-- Shows the first 6 contest results; a "View more" button appears automatically when there are more.
                  Add new results at the top so the latest ones stay visible. -->
             <div class="contest-grid" data-collapse="6">
@@ -984,25 +1005,6 @@
                             <a href="https://toph.co/c/uttara-university-inter-university-2025/standings"
                                 target="_blank" rel="noopener">
                                 GreenU_TripleQ <i class="fas fa-external-link-alt"></i>
-                            </a>
-                        </div>
-                    </div>
-                </article>
-
-                <!-- IDPC-2024 at GUB -->
-                <article class="contest-card reveal" style="--medal: #CD7F32;">
-                    <div class="contest-rank">
-                        <i class="fas fa-medal"></i>
-                        <span class="rank-label">4th Runner-Up</span>
-                    </div>
-                    <div class="contest-info">
-                        <span class="contest-tag">IDPC</span>
-                        <p class="contest-name">Inter Department Programming Contest <strong>(IDPC)</strong> at GUB</p>
-                        <div class="contest-foot">
-                            <span class="contest-year">2024</span>
-                            <a href="https://www.facebook.com/GreenUniversityComputerClub/posts/pfbid0QHKVGJ1cY4znjg3FUEq7WfGzxauF6ZnUdMCkgWx8FZHvcMwZkJm2cGv7VdayijBkl?rdid=4ktN1T82XFGv5V2G#"
-                                target="_blank" rel="noopener">
-                                View Facebook Post <i class="fas fa-external-link-alt"></i>
                             </a>
                         </div>
                     </div>

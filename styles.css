@@ -1603,6 +1603,76 @@ section {
 .contest-foot a i { font-size: .7rem; }
 .contest-foot a:hover { color: var(--accent-2); }
 
+/* Highlighted contest result with photo */
+.contest-feature {
+  --medal: #cd7f32;
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr);
+  margin-bottom: 16px;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background: var(--surface);
+  border: 1px solid color-mix(in srgb, var(--medal) 55%, transparent);
+  box-shadow: 0 0 0 4px color-mix(in srgb, var(--medal) 10%, transparent), var(--shadow-lg);
+  transition: transform .3s var(--ease), box-shadow .3s var(--ease);
+}
+.contest-feature:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 0 0 4px color-mix(in srgb, var(--medal) 18%, transparent), var(--shadow-lg);
+}
+
+.feature-photo {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  min-height: 100%;
+}
+.feature-photo img {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  object-position: 30% 40%;
+  transition: transform .6s var(--ease);
+}
+.contest-feature:hover .feature-photo img { transform: scale(1.03); }
+
+.feature-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 12px;
+  padding: 32px;
+}
+
+.feature-badge {
+  align-self: flex-start;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 5px 12px;
+  border-radius: var(--radius-pill);
+  font-size: .78rem;
+  font-weight: 600;
+  color: var(--medal);
+  background: color-mix(in srgb, var(--medal) 13%, transparent);
+  border: 1px solid color-mix(in srgb, var(--medal) 35%, transparent);
+}
+
+.feature-rank {
+  font-family: var(--font-display);
+  font-size: clamp(1.7rem, 3vw, 2.2rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  color: var(--text);
+}
+
+.feature-name { color: var(--text-2); font-size: 1rem; line-height: 1.6; }
+.feature-note { color: var(--text-3); font-size: .9rem; }
+.feature-body .contest-foot { margin-top: 6px; }
+
 /* Certifications */
 .cert-card { margin-top: 40px; }
 .sub-title-left { margin-bottom: 18px; }
@@ -1951,6 +2021,8 @@ footer {
 }
 
 @media (max-width: 960px) {
+  .contest-feature { grid-template-columns: minmax(0, 1fr); }
+  .feature-body { padding: 24px; }
   :root { --nav-h: 64px; }
 
   .nav-toggle { display: flex; }
