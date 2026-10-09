@@ -1539,13 +1539,6 @@ section {
 }
 .contest-card:hover { transform: translateY(-4px); border-color: var(--border-strong); }
 
-.contest-highlight {
-  background:
-    radial-gradient(circle at 100% 0%, var(--glow), transparent 55%),
-    var(--surface);
-  border-color: var(--border-strong);
-}
-
 .contest-rank {
   display: flex;
   align-items: center;
