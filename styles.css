@@ -199,7 +199,7 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 
 .logo-text {
   font-family: 'Great Vibes', 'Segoe Script', cursive;
-  font-size: 2rem;
+  font-size: 1.4rem;
   font-weight: 400;
   line-height: 1;
   letter-spacing: 0;
@@ -2029,7 +2029,7 @@ footer {
 }
 
 @media (min-width: 961px) and (max-width: 1180px) {
-  #navbar .logo-text { font-size: 1.6rem; }
+  #navbar .logo-text { font-size: 1.4rem; }
   .nav-container { gap: 14px; }
   .nav-menu a { padding: 8px 7px; font-size: .84rem; }
   .nav-actions { gap: 8px; }
