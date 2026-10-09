@@ -780,12 +780,13 @@ section {
 .about-card {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   gap: 28px;
 }
 
+.about-text + .about-text { margin-top: -12px; }
+
 .about-text {
-  font-size: 1.12rem;
+  font-size: 1.08rem;
   line-height: 1.85;
   color: var(--text-2);
 }
@@ -794,7 +795,7 @@ section {
   background: linear-gradient(transparent 62%, var(--accent-soft) 62%);
 }
 
-.about-tags { display: flex; flex-wrap: wrap; gap: 8px; }
+.about-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: auto; }
 
 .facts { display: grid; gap: 18px; }
 .facts div { display: grid; gap: 3px; }
