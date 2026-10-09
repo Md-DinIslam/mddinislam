@@ -1,100 +1,274 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Md. Din Islam </title>
-  <meta name="description" content=" ICPC Asia Dhaka Regionalist, Computer Science and Engineering student specializing in AI/ML, with hands-on experience building LLM-powered and agentic AI applications. Strong foundation in machine learning, NLP, and algorithms.">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" href="styles.css">
-  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
-</head>
-<body>
-  <!-- Navigation -->
-  <nav id="navbar">
-    <div class="nav-container">
-      <a href="#" class="nav-logo">Md. Din Islam</a>
-      <div class="nav-toggle" id="navToggle">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-      <ul class="nav-menu" id="navMenu">
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#research">Research</a></li>
-        <li><a href="#achievements">Achievements</a></li>
-        <li><a href="#education">Education</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </div>
-  </nav>
 
-  <!-- Hero Section -->
-  <header>
-    <div class="hero-content hero-two-column">
-      <div class="hero-left">
-        <h1> Hi, I'm Md. Din Islam</h1>
-        <p class="hero-subtitle"> ICPC Asia Dhaka Regionalist | Competitive Programmer | Enthusiast in Algorithms & Data Structures</p>
-        <!-- <p class="hero-description">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Md. Din Islam</title>
+    <meta name="description"
+        content="ICPC Asia Dhaka Regionalist, Computer Science and Engineering student specializing in AI/ML, with hands-on experience building LLM-powered and agentic AI applications. Strong foundation in machine learning, NLP, and algorithms.">
+    <meta name="theme-color" content="#0a0f0d">
+    <meta property="og:title" content="Md. Din Islam — Portfolio">
+    <meta property="og:description"
+        content="ICPC Asia Dhaka Regionalist | Competitive Programmer | AI/ML-Focused CS Student">
+    <meta property="og:image" content="images/dinislam.jpg">
+
+    <!-- Apply saved / system theme before paint to avoid a flash -->
+    <script>
+        (function () {
+            var t = null;
+            try { t = localStorage.getItem('theme'); } catch (e) { }
+            if (!t) t = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+            document.documentElement.setAttribute('data-theme', t);
+            document.documentElement.classList.add('js');
+        })();
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <a class="skip-link" href="#about">Skip to content</a>
+
+    <!-- Scroll progress -->
+    <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+    <!-- Navigation -->
+    <nav id="navbar" aria-label="Primary">
+        <div class="nav-container">
+            <a href="#" class="nav-logo" aria-label="Md. Din Islam — back to top">
+                <span class="logo-mark">DI</span>
+                <span class="logo-text">Md. Din Islam</span>
+            </a>
+
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#research">Research</a></li>
+                <li><a href="#achievements">Achievements</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li class="nav-menu-cta"><a href="CV/resume_mddinislam.pdf" target="_blank" rel="noopener"><i
+                            class="fas fa-file-lines"></i> Resume</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <button class="icon-btn" id="themeToggle" type="button" aria-label="Toggle color theme">
+                    <i class="fas fa-moon theme-icon-dark"></i>
+                    <i class="fas fa-sun theme-icon-light"></i>
+                </button>
+                <a href="CV/resume_mddinislam.pdf" target="_blank" rel="noopener"
+                    class="btn btn-sm btn-primary nav-resume">
+                    <i class="fas fa-file-lines"></i> Resume
+                </a>
+                <button class="nav-toggle" id="navToggle" type="button" aria-label="Open menu" aria-expanded="false"
+                    aria-controls="navMenu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-bg" aria-hidden="true">
+            <div class="hero-grid"></div>
+            <div class="hero-glow hero-glow-1"></div>
+            <div class="hero-glow hero-glow-2"></div>
+        </div>
+
+        <div class="hero-content">
+            <div class="hero-left">
+                <span class="hero-badge reveal">
+                    <span class="pulse-dot"></span>
+                    ICPC Asia Dhaka Regionalist · 2025
+                </span>
+
+                <h1 class="hero-title reveal">
+                    <span class="hero-hi">Hi, I'm</span>
+                    <span class="hero-name">Md. Din Islam</span>
+                </h1>
+
+                <p class="hero-subtitle reveal">
+                    <span class="seg">ICPC Asia Dhaka Regionalist <span class="sep">|</span></span> <span
+                        class="seg">Competitive Programmer <span class="sep">|</span></span> Enthusiast in Algorithms
+                    &amp; Data Structures
+                </p>
+                <!-- <p class="hero-description">
           Computer Science and Engineering student specializing in AI/ML, with hands-on experience building LLM-powered and agentic AI applications. Strong foundation in machine learning, NLP, and algorithms. Active competitive programmer with a <strong>Codeforces rating of 1314 (max)</strong>, having solved 1800+ problems across platforms including <strong>1180+ on Codeforces, 160+ on CSES, 70+ on LeetCode </strong> and a regular participant in national contests including IUPC. Interested in multilingual code generation and ML fairness, with a focus on efficient and scalable AI systems.
         </p> -->
 
-        <div class="tech-icons">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" alt="C++" title="C++">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" title="Python">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java" title="Java">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" title="JavaScript">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL" title="MySQL">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg" alt="Django" title="Django">
+                <div class="btn-group reveal">
+                    <a href="CV/resume_mddinislam.pdf" target="_blank" rel="noopener" class="btn btn-primary">
+                        <i class="fas fa-eye"></i> View Resume
+                    </a>
+                    <a href="CV/resume_mddinislam.pdf" download class="btn btn-secondary">
+                        <i class="fas fa-download"></i> Download Resume
+                    </a>
+                    <a href="#contact" class="btn btn-ghost">
+                        <i class="fas fa-envelope"></i> Get In Touch
+                    </a>
+                </div>
+
+                <div class="contact-info reveal">
+                    <a href="mailto:muhammaddinislam08@gmail.com"><i class="fas fa-envelope"></i>
+                        muhammaddinislam08@gmail.com</a>
+                    <a href="tel:+8801930840806"><i class="fas fa-phone"></i> +880 193 084 0806</a>
+                    <span><i class="fas fa-location-dot"></i> Gazipur, Dhaka, Bangladesh</span>
+                </div>
+
+                <div class="tech-icons reveal" aria-label="Core technologies">
+                    <span class="tech-icons-label">Stack</span>
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg"
+                        alt="C++" title="C++">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
+                        alt="Python" title="Python">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java"
+                        title="Java">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+                        alt="JavaScript" title="JavaScript">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL"
+                        title="MySQL">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg" alt="Django"
+                        title="Django">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"
+                        alt="TypeScript" title="TypeScript">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg"
+                        alt="FastAPI" title="FastAPI">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg"
+                        alt="Next.js" title="Next.js">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg"
+                        alt="PostgreSQL" title="PostgreSQL">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg"
+                        alt="Docker" title="Docker">
+                </div>
+            </div>
+
+            <div class="hero-right reveal">
+                <div class="photo-frame">
+                    <div class="photo-ring" aria-hidden="true"></div>
+                    <img src="images/dinislam.jpg" alt="Md. Din Islam" class="profile-photo">
+
+                    <div class="float-card float-card-1">
+                        <span class="float-icon cf"><i class="fas fa-chart-simple"></i></span>
+                        <div>
+                            <strong>1314</strong>
+                            <small>Codeforces max</small>
+                        </div>
+                    </div>
+                    <div class="float-card float-card-2">
+                        <span class="float-icon"><i class="fas fa-code"></i></span>
+                        <div>
+                            <strong>1800+</strong>
+                            <small>Problems solved</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
 
-        <div class="contact-info">
-          <a href="mailto:muhammaddinislam08@gmail.com"><i class="fas fa-envelope"></i> muhammaddinislam08@gmail.com</a>
-          <span>|</span>
-          <a href="tel:+8801930840806"><i class="fas fa-phone"></i> +880 193 084 0806</a>
-          <span>|</span>
-          <span><i class="fas fa-map-marker-alt"></i> Gazipur, Dhaka, Bangladesh</span>
+        <!-- Quick stats -->
+        <div class="hero-stats reveal">
+            <div class="stat">
+                <span class="stat-value" data-count="1800" data-suffix="+">1800+</span>
+                <span class="stat-label">Problems solved</span>
+            </div>
+            <div class="stat">
+                <span class="stat-value" data-count="1314">1314</span>
+                <span class="stat-label">Codeforces max rating</span>
+            </div>
+            <div class="stat">
+                <span class="stat-value" data-count="1492">1492</span>
+                <span class="stat-label">CodeChef max rating · 2★</span>
+            </div>
+            <div class="stat">
+                <span class="stat-value">ICPC</span>
+                <span class="stat-label">Asia Dhaka Regionalist 2025</span>
+            </div>
         </div>
 
-        <div class="btn-group">
-          <a href="CV/resume_mddinislam.pdf" target="_blank" class="btn btn-primary">
-            <i class="fas fa-eye"></i> View Resume
-          </a>
-          <a href="CV/resume_mddinislam.pdf" download class="btn btn-secondary">
-            <i class="fas fa-download"></i> Download Resume
-          </a>
-          <a href="#contact" class="btn btn-secondary">
-            <i class="fas fa-envelope"></i> Get In Touch
-          </a>
-        </div>
-      </div>
-      
-      <div class="hero-right">
-        <img src="./photo/dinislam.jpg" alt="Md. Din Islam" class="profile-photo">
-      </div>
-    </div>
-  </header>
+        <a href="#about" class="scroll-cue" aria-label="Scroll to About">
+            <span></span>
+        </a>
+    </header>
 
-  <!-- About Section -->
-  <div class="container">
-    <section id="about">
-      <h2 class="section-title">About Me</h2>
-      <p class="section-subtitle">ICPC Asia Dhaka Regionalist | AI/ML-Focused CS Student | Data Structure & Algorithms | Competitive Programming</p>
-      <div class="card">
-        <p style="font-size: 1.05rem; line-height: 1.8; color: #444;">
-          An active competitive programmer with a <strong>Codeforces rating of 1314 (max)</strong>, having solved <strong>1800+</strong> problems across platforms including <strong>1180+ on Codeforces, 160+ on CSES, 70+ on LeetCode </strong> and a regular participant in national contests like <strong>IUPC</strong>. Interested in multilingual code generation and ML fairness, with a focus on efficient and scalable AI systems.
-        </p>
-      </div>
-    </section>
+    <main class="container">
 
-    <!-- Skills Section -->
-    <section id="skills">
-      <h2 class="section-title">Technical Skills</h2>
-      <div class="skills-container">
-        <!-- <div class="skill-category">
+        <!-- About Section -->
+        <section id="about">
+            <div class="section-head reveal">
+                <span class="eyebrow"><span class="eyebrow-num">01</span> About</span>
+                <h2 class="section-title">About Me</h2>
+                <p class="section-subtitle">ICPC Asia Dhaka Regionalist | AI/ML-Focused CS Student | Data Structure
+                    &amp; Algorithms | Competitive Programming</p>
+            </div>
+
+            <div class="about-grid">
+                <div class="card about-card reveal">
+                    <p class="about-text">
+                        An active competitive programmer with a <strong>Codeforces rating of 1314 (max)</strong>, having
+                        solved <strong>1800+</strong> problems across platforms including <strong>1400+ on Codeforces,
+                            160+ on CSES, 70+ on LeetCode </strong> and a regular participant in national contests like
+                        <strong>IUPC</strong>. Interested in multilingual code generation and ML fairness, with a focus
+                        on efficient and scalable AI systems.
+                    </p>
+                    <div class="about-tags">
+                        <span class="chip"><i class="fas fa-trophy"></i> ICPC Regionalist</span>
+                        <span class="chip"><i class="fas fa-brain"></i> AI / ML</span>
+                        <span class="chip"><i class="fas fa-diagram-project"></i> DSA</span>
+                        <span class="chip"><i class="fas fa-language"></i> Multilingual Code Generation</span>
+                        <span class="chip"><i class="fas fa-scale-balanced"></i> ML Fairness</span>
+                        <span class="chip"><i class="fas fa-shield-halved"></i> Privacy-Preserving Document AI</span>
+                    </div>
+                </div>
+
+                <aside class="card facts-card reveal">
+                    <h3 class="card-label">Quick facts</h3>
+                    <dl class="facts">
+                        <div>
+                            <dt><i class="fas fa-graduation-cap"></i> Studying</dt>
+                            <dd>B.Sc. in CSE, Green University of Bangladesh</dd>
+                        </div>
+                        <div>
+                            <dt><i class="fas fa-calendar-check"></i> Graduating</dt>
+                            <dd>Expected January 2027</dd>
+                        </div>
+                        <div>
+                            <dt><i class="fas fa-location-dot"></i> Based in</dt>
+                            <dd>Gazipur, Dhaka, Bangladesh</dd>
+                        </div>
+                        <div>
+                            <dt><i class="fas fa-flask"></i> Thesis</dt>
+                            <dd><a href="#research">DigiDoc — privacy-preserving document digitization</a></dd>
+                        </div>
+                        <div>
+                            <dt><i class="fas fa-users"></i> Contest teams</dt>
+                            <dd>Green_MK · GreenU_TripleQ</dd>
+                        </div>
+                    </dl>
+                </aside>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills">
+            <div class="section-head reveal">
+                <span class="eyebrow"><span class="eyebrow-num">02</span> Skills</span>
+                <h2 class="section-title">Technical Skills</h2>
+                <p class="section-subtitle">The tools and fundamentals I work with every day.</p>
+            </div>
+
+            <div class="skills-container">
+                <!-- <div class="skill-category">
           <h3><i class="fas fa-robot"></i> Generative AI & LLMs</h3>
           <ul>
             <li>LangChain</li>
@@ -107,18 +281,31 @@
           </ul>
         </div> -->
 
-        <div class="skill-category">
-          <h3><i class="fas fa-brain"></i> Machine Learning</h3>
-          <ul>
-            <!-- <li>Scikit-learn</li> -->
-            <li>Model Training & Evaluation</li>
-            <!-- <li>Feature Engineering</li> -->
-            <li>ML Model like Supervised Learning, Unsupervised Learning</li>
-            <li>Predictive Modeling</li>
-          </ul>
-        </div>
+                <div class="skill-category reveal">
+                    <div class="skill-icon"><i class="fas fa-brain"></i></div>
+                    <h3>Machine Learning</h3>
+                    <ul>
+                        <!-- <li>Scikit-learn</li> -->
+                        <li>Model Training &amp; Evaluation</li>
+                        <!-- <li>Feature Engineering</li> -->
+                        <li>ML Model like Supervised Learning, Unsupervised Learning</li>
+                        <li>Predictive Modeling</li>
+                    </ul>
+                </div>
 
-        <!-- <div class="skill-category">
+                <div class="skill-category reveal">
+                    <div class="skill-icon"><i class="fas fa-file-lines"></i></div>
+                    <h3>Document AI &amp; NLP</h3>
+                    <ul>
+                        <li>OCR (Tesseract.js)</li>
+                        <li>Image Preprocessing (Otsu Binarization)</li>
+                        <li>Sentence Embeddings (MiniLM)</li>
+                        <li>Document Annotation</li>
+                        <li>OCR Evaluation (CER / WER)</li>
+                    </ul>
+                </div>
+
+                <!-- <div class="skill-category">
           <h3><i class="fas fa-chart-line"></i> Data Science & Analytics</h3>
           <ul>
             <li>Exploratory Data Analysis</li>
@@ -128,39 +315,71 @@
           </ul>
         </div> -->
 
-        <div class="skill-category">
-          <h3><i class="fas fa-code"></i> Programming Languages</h3>
-          <ul>
-            <li>Python</li>
-            <li>C++ </li>
-            <li>C</li>
-            <li>Java</li>
-            <li>JavaScript</li>
-            <li>SQL</li>
-          </ul>
-        </div>
+                <div class="skill-category reveal">
+                    <div class="skill-icon"><i class="fas fa-code"></i></div>
+                    <h3>Programming Languages</h3>
+                    <ul>
+                        <li>Python</li>
+                        <li>C++</li>
+                        <li>C</li>
+                        <li>Java</li>
+                        <li>JavaScript</li>
+                        <li>TypeScript</li>
+                        <li>SQL</li>
+                    </ul>
+                </div>
 
-        <div class="skill-category">
-          <h3><i class="fas fa-database"></i> Databases & Vector Stores</h3>
-          <ul>
-            <li>Vector Databases</li>
-            <li>MySQL</li>
-          </ul>
-        </div>
+                <div class="skill-category reveal">
+                    <div class="skill-icon"><i class="fas fa-database"></i></div>
+                    <h3>Databases &amp; Vector Stores</h3>
+                    <ul>
+                        <li>Vector Databases</li>
+                        <li>PostgreSQL</li>
+                        <li>MySQL</li>
+                    </ul>
+                </div>
 
-        <div class="skill-category">
-          <h3><i class="fas fa-project-diagram"></i> Data Structure & Algorithms</h3>
-          <ul>
-            <li>Graph (BFS, DFS, DSU, Tree etc.)</li>
-            <li>Backtracking</li>
-            <li>Dynamic Programming</li>
-            <li>String (Static & Dynamic Hasing)</li>
-            <li>Linked-List</li>
-            <li>Many more</li>
-          </ul>
-        </div>
+                <div class="skill-category reveal">
+                    <div class="skill-icon"><i class="fas fa-server"></i></div>
+                    <h3>Web &amp; Backend</h3>
+                    <ul>
+                        <li>FastAPI</li>
+                        <li>Django</li>
+                        <li>Next.js</li>
+                        <li>React</li>
+                        <li>REST APIs</li>
+                        <li>SQLAlchemy</li>
+                        <li>Tailwind CSS</li>
+                        <li>JWT Auth &amp; RBAC</li>
+                    </ul>
+                </div>
 
-        <!-- <div class="skill-category">
+                <div class="skill-category reveal">
+                    <div class="skill-icon"><i class="fab fa-docker"></i></div>
+                    <h3>DevOps &amp; Tools</h3>
+                    <ul>
+                        <li>Git &amp; GitHub</li>
+                        <li>Docker &amp; Docker Compose</li>
+                        <li>GitHub Actions (CI/CD)</li>
+                        <li>Vercel</li>
+                        <li>Render</li>
+                    </ul>
+                </div>
+
+                <div class="skill-category reveal">
+                    <div class="skill-icon"><i class="fas fa-diagram-project"></i></div>
+                    <h3>Data Structure &amp; Algorithms</h3>
+                    <ul>
+                        <li>Graph (BFS, DFS, DSU, Tree etc.)</li>
+                        <li>Backtracking</li>
+                        <li>Dynamic Programming</li>
+                        <li>String (Static &amp; Dynamic Hasing)</li>
+                        <li>Linked-List</li>
+                        <li>Many more</li>
+                    </ul>
+                </div>
+
+                <!-- <div class="skill-category">
           <h3><i class="fas fa-globe"></i> Web Frameworks</h3>
           <ul>
             <li>Streamlit</li>
@@ -168,59 +387,229 @@
             <li>REST APIs</li>
           </ul>
         </div> -->
-      </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects">
-      <h2 class="section-title">Featured Projects</h2>
-      <div class="grid grid-2">
-        
-        <!-- Project 1 -->
-        <div class="project-card">
-          <div class="project-header">
-            <h3 class="project-title">Multi-Client Chat Application</h3>
-            <div class="project-links">
-              <!-- <a href="https://rag-pdf-app-tanvir.streamlit.app/" 
-                class="project-link" 
-                title="Live Demo"
-                target="_blank"
-                rel="noopener noreferrer">
-                <i class="fas fa-external-link-alt"></i>
-              </a> -->
-              <a href="https://github.com/Md-DinIslam/Multi-Client_ChatApp"
-                class="project-link"
-                title="GitHub"
-                target="_blank"
-                rel="noopener noreferrer">
-                <i class="fab fa-github"></i>
-              </a>
             </div>
-          </div>
-          <p class="project-description">
-            Developed a Multiclient Chat Application in Java that allows multiple users to communicate simultaneously over a network. Implemented client-server architecture with threading to handle concurrent connections efficiently. Focused on building a robust, real-time messaging system with clear message broadcasting and user management features.
-          </p>
-          <div class="project-tech">
-            <span class="tech-tag">Java</span>
-            <span class="tech-tag">GUI</span>
-            <span class="tech-tag">MySQL</span>
-            <span class="tech-tag">Socket Programming</span>
-          </div>
-        </div>
 
-        <!-- Project 2 -->
-        <!-- <div class="project-card">
+            <!-- Problem-solving visualization -->
+            <div class="card solve-card reveal">
+                <div class="solve-head">
+                    <div>
+                        <h3 class="card-label">Problem solving by platform</h3>
+                        <p class="solve-total"><span>1800+</span> problems solved across platforms</p>
+                    </div>
+                    <span class="mono-note">// counts from profile cards below</span>
+                </div>
+                <div class="bars">
+                    <div class="bar-row">
+                        <span class="bar-name">Codeforces</span>
+                        <div class="bar-track">
+                            <div class="bar-fill" style="--w: 100%; --c: var(--cf);"></div>
+                        </div>
+                        <span class="bar-val">1400+</span>
+                    </div>
+                    <div class="bar-row">
+                        <span class="bar-name">CSES</span>
+                        <div class="bar-track">
+                            <div class="bar-fill" style="--w: 11.9%; --c: var(--cses);"></div>
+                        </div>
+                        <span class="bar-val">167+</span>
+                    </div>
+                    <div class="bar-row">
+                        <span class="bar-name">CodeChef</span>
+                        <div class="bar-track">
+                            <div class="bar-fill" style="--w: 7.1%; --c: var(--cc);"></div>
+                        </div>
+                        <span class="bar-val">100+</span>
+                    </div>
+                    <div class="bar-row">
+                        <span class="bar-name">LeetCode</span>
+                        <div class="bar-track">
+                            <div class="bar-fill" style="--w: 5%; --c: var(--lc);"></div>
+                        </div>
+                        <span class="bar-val">70+</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects">
+            <div class="section-head reveal">
+                <span class="eyebrow"><span class="eyebrow-num">03</span> Projects</span>
+                <h2 class="section-title">Featured Projects</h2>
+                <p class="section-subtitle">Things I've designed and built.</p>
+            </div>
+
+            <div class="projects-grid">
+
+                <!-- Project: Unlimited Chess Reviewer (latest) -->
+                <article class="project-card project-featured reveal">
+                    <div class="project-visual chess-visual" aria-hidden="true">
+                        <div class="chess-wrap">
+                            <div class="eval-bar"><span class="eval-fill"></span><em>+0.6</em></div>
+                            <div class="chess-board">
+                                <!-- Two Knights Defense after 4. Ng5 (illustrative) -->
+                                <span class="sq-hl" style="--r: 6; --c: 6;"></span>
+                                <span class="sq-hl" style="--r: 4; --c: 7;"></span>
+                                <span class="pc b" style="--r: 1; --c: 1;">♜</span>
+                                <span class="pc b" style="--r: 1; --c: 3;">♝</span>
+                                <span class="pc b" style="--r: 1; --c: 4;">♛</span>
+                                <span class="pc b" style="--r: 1; --c: 5;">♚</span>
+                                <span class="pc b" style="--r: 1; --c: 6;">♝</span>
+                                <span class="pc b" style="--r: 1; --c: 8;">♜</span>
+                                <span class="pc b" style="--r: 2; --c: 1;">♟&#xFE0E;</span>
+                                <span class="pc b" style="--r: 2; --c: 2;">♟&#xFE0E;</span>
+                                <span class="pc b" style="--r: 2; --c: 3;">♟&#xFE0E;</span>
+                                <span class="pc b" style="--r: 2; --c: 4;">♟&#xFE0E;</span>
+                                <span class="pc b" style="--r: 2; --c: 6;">♟&#xFE0E;</span>
+                                <span class="pc b" style="--r: 2; --c: 7;">♟&#xFE0E;</span>
+                                <span class="pc b" style="--r: 2; --c: 8;">♟&#xFE0E;</span>
+                                <span class="pc b" style="--r: 3; --c: 3;">♞</span>
+                                <span class="pc b" style="--r: 3; --c: 6;">♞</span>
+                                <span class="pc b" style="--r: 4; --c: 5;">♟&#xFE0E;</span>
+                                <span class="pc w" style="--r: 5; --c: 3;">♝</span>
+                                <span class="pc w" style="--r: 5; --c: 5;">♟&#xFE0E;</span>
+                                <span class="pc w" style="--r: 4; --c: 7;">♞</span>
+                                <span class="pc w" style="--r: 7; --c: 1;">♟&#xFE0E;</span>
+                                <span class="pc w" style="--r: 7; --c: 2;">♟&#xFE0E;</span>
+                                <span class="pc w" style="--r: 7; --c: 3;">♟&#xFE0E;</span>
+                                <span class="pc w" style="--r: 7; --c: 4;">♟&#xFE0E;</span>
+                                <span class="pc w" style="--r: 7; --c: 6;">♟&#xFE0E;</span>
+                                <span class="pc w" style="--r: 7; --c: 7;">♟&#xFE0E;</span>
+                                <span class="pc w" style="--r: 7; --c: 8;">♟&#xFE0E;</span>
+                                <span class="pc w" style="--r: 8; --c: 1;">♜</span>
+                                <span class="pc w" style="--r: 8; --c: 2;">♞</span>
+                                <span class="pc w" style="--r: 8; --c: 3;">♝</span>
+                                <span class="pc w" style="--r: 8; --c: 4;">♛</span>
+                                <span class="pc w" style="--r: 8; --c: 5;">♚</span>
+                                <span class="pc w" style="--r: 8; --c: 8;">♜</span>
+                                <span class="move-badge" style="--r: 4; --c: 7;"><i class="fas fa-star"></i></span>
+                            </div>
+                        </div>
+                        <div class="move-classes">
+                            <span style="--mc: #a88865;">Book</span>
+                            <span style="--mc: #81b64c;">Best</span>
+                            <span style="--mc: #26c2a3;">Brilliant</span>
+                            <span style="--mc: #5c8bb0;">Great</span>
+                            <span style="--mc: #ffa459;">Mistake</span>
+                            <span style="--mc: #fa412d;">Blunder</span>
+                        </div>
+                    </div>
+
+                    <div class="project-body">
+                        <div class="project-header">
+                            <span class="project-kicker">Latest · Chess Analysis</span>
+                            <div class="project-links">
+                                <a href="https://github.com/Md-DinIslam/unlimited-chess-reviewer" class="project-link"
+                                    title="GitHub" aria-label="Unlimited Chess Reviewer on GitHub" target="_blank"
+                                    rel="noopener noreferrer">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <h3 class="project-title">Unlimited Chess Reviewer</h3>
+                        <p class="project-description">
+                            A chess game analysis and review application designed to provide detailed, engine-powered
+                            feedback on chess games.
+                        </p>
+                        <ul class="project-highlights">
+                            <li><i class="fas fa-chess-pawn"></i> Automated game analysis</li>
+                            <li><i class="fas fa-brain"></i> Stockfish-powered move evaluation</li>
+                            <li><i class="fas fa-list-ol"></i> Move-by-move game review</li>
+                            <li><i class="fas fa-book-open"></i> Opening book / Polyglot-based opening detection</li>
+                            <li><i class="fas fa-chart-line"></i> Evaluation-based move quality analysis</li>
+                            <li><i class="fas fa-bullseye"></i> Multi-PV analysis for critical moves and tactical opportunities</li>
+                            <li><i class="fas fa-file-lines"></i> PGN-based game review</li>
+                            <li><i class="fas fa-infinity"></i> Unlimited chess game analysis</li>
+                        </ul>
+                        <p class="project-note">
+                            <i class="fas fa-star"></i> Move classification: <strong>Book, Best, Brilliant, Great, Mistake &amp; Blunder</strong>
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Stockfish</span>
+                            <span class="tech-tag">PGN</span>
+                            <span class="tech-tag">Polyglot</span>
+                            <span class="tech-tag">Multi-PV</span>
+                        </div>
+                        <a href="https://github.com/Md-DinIslam/unlimited-chess-reviewer" target="_blank"
+                            rel="noopener noreferrer" class="text-link">
+                            View project on GitHub <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Project: Multi-Client Chat Application -->
+                <article class="project-card project-featured project-reverse reveal">
+                    <div class="project-visual" aria-hidden="true">
+                        <div class="term">
+                            <div class="term-bar"><span></span><span></span><span></span><em>ChatServer.java</em></div>
+                            <pre class="term-body"><span class="t-c">// client-server · multithreaded</span>
+<span class="t-k">ServerSocket</span> server = <span class="t-k">new</span> ServerSocket(port);
+<span class="t-k">while</span> (running) {
+  Socket s = server.accept();
+  <span class="t-k">new</span> Thread(<span class="t-k">new</span> ClientHandler(s)).start();
+}
+<span class="t-c">// broadcast to all connected users</span>
+<span class="t-o">[server]</span> 3 clients connected<span class="caret"></span></pre>
+                        </div>
+                    </div>
+
+                    <div class="project-body">
+                        <div class="project-header">
+                            <span class="project-kicker">Networking · Java</span>
+                            <div class="project-links">
+                                <!-- <a href="https://rag-pdf-app-tanvir.streamlit.app/"
+                  class="project-link"
+                  title="Live Demo"
+                  target="_blank"
+                  rel="noopener noreferrer">
+                  <i class="fas fa-external-link-alt"></i>
+                </a> -->
+                                <a href="https://github.com/Md-DinIslam/Multi-Client_ChatApp" class="project-link"
+                                    title="GitHub" aria-label="Multi-Client Chat Application on GitHub" target="_blank"
+                                    rel="noopener noreferrer">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <h3 class="project-title">Multi-Client Chat Application</h3>
+                        <p class="project-description">
+                            Developed a Multiclient Chat Application in Java that allows multiple users to communicate
+                            simultaneously over a network. Implemented client-server architecture with threading to
+                            handle concurrent connections efficiently. Focused on building a robust, real-time messaging
+                            system with clear message broadcasting and user management features.
+                        </p>
+                        <ul class="project-highlights">
+                            <li><i class="fas fa-server"></i> Client-server architecture</li>
+                            <li><i class="fas fa-layer-group"></i> Threaded concurrent connections</li>
+                            <li><i class="fas fa-bullhorn"></i> Real-time message broadcasting</li>
+                            <li><i class="fas fa-user-gear"></i> User management</li>
+                        </ul>
+                        <div class="project-tech">
+                            <span class="tech-tag">Java</span>
+                            <span class="tech-tag">GUI</span>
+                            <span class="tech-tag">MySQL</span>
+                            <span class="tech-tag">Socket Programming</span>
+                        </div>
+                        <a href="https://github.com/Md-DinIslam/Multi-Client_ChatApp" target="_blank"
+                            rel="noopener noreferrer" class="text-link">
+                            View source on GitHub <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Project 2 -->
+                <!-- <div class="project-card">
           <div class="project-header">
             <h3 class="project-title">Green Garden</h3>
             <div class="project-links"> -->
-              <!-- <a href="https://rag-pdf-app-tanvir.streamlit.app/" 
-                class="project-link" 
+                <!-- <a href="https://rag-pdf-app-tanvir.streamlit.app/"
+                class="project-link"
                 title="Live Demo"
                 target="_blank"
                 rel="noopener noreferrer">
                 <i class="fas fa-external-link-alt"></i>
               </a> -->
-              <!-- <a href="https://github.com/Md-DinIslam/My_Project/tree/master/Green%20Garden"
+                <!-- <a href="https://github.com/Md-DinIslam/My_Project/tree/master/Green%20Garden"
                 class="project-link"
                 title="GitHub"
                 target="_blank"
@@ -241,18 +630,31 @@
           </div>
         </div> -->
 
-    </section>
+                <a href="https://github.com/Md-DinIslam" target="_blank" rel="noopener noreferrer"
+                    class="github-cta reveal">
+                    <i class="fab fa-github"></i>
+                    <div>
+                        <strong>More on GitHub</strong>
+                        <span>github.com/Md-DinIslam</span>
+                    </div>
+                    <i class="fas fa-arrow-up-right-from-square"></i>
+                </a>
+            </div>
+        </section>
 
-    <!-- Research Section -->
-    <section id="research">
-      <h2 class="section-title">Thesis & Research</h2>
-      
-      <!-- <div class="card" style="border-left: 4px solid var(--primary-color); margin-bottom: 2rem;">
+        <!-- Research Section -->
+        <section id="research">
+            <div class="section-head reveal">
+                <span class="eyebrow"><span class="eyebrow-num">04</span> Research</span>
+                <h2 class="section-title">Thesis &amp; Research</h2>
+            </div>
+
+            <!-- <div class="card" style="border-left: 4px solid var(--primary-color); margin-bottom: 2rem;">
         <h3 style="color: var(--primary-color); margin-bottom: 15px; font-size: 1.4rem;">
           <i class="fas fa-flask"></i> Optimizing Bangla Code Generation (In Progress)
         </h3>
         <p style="line-height: 1.8; color: #555; margin-bottom: 1rem;">
-          Developing efficient code generation systems for low-resource languages using LoRA/QLoRA, reducing parameters 
+          Developing efficient code generation systems for low-resource languages using LoRA/QLoRA, reducing parameters
           by ~90% while maintaining comparable performance.
         </p>
         <ul style="line-height: 1.8; color: #555; padding-left: 20px;">
@@ -261,400 +663,458 @@
         </ul>
       </div> -->
 
-      <div class="card" style="border-left: 4px solid #28a745;">
-        <h3 style="color: #28a745; margin-bottom: 15px; font-size: 1.4rem;">
-          <i class="fas fa-balance-scale"></i> AaP: A Vision-based Automated Document Processing Framework for Client Application Form Verification (In Progress)
-        </h3>
-        <!-- <p style="line-height: 1.8; color: #555; margin-bottom: 1rem;">
-          Working on automated bank document analysis to extract and understand structured information efficiently using AI and ML techniques:
-        </p> -->
-        <ul style="line-height: 1.8; color: #555; padding-left: 20px;">
-          <li>
-            Developed a computer vision-based system to automate client application form verification using OCR and document annotation techniques. The system extracts structured data from scanned documents and validates key fields to improve accuracy and reduce manual processing time.
-          </li>
-        </ul>
-      </div>
-    </section>
+            <!-- Previous thesis title / summary (kept for reference)
+            AaP: A Vision-based Automated Document Processing Framework for Client Application Form Verification (In Progress)
+            Developed a computer vision-based system to automate client application form verification using OCR and
+            document annotation techniques. The system extracts structured data from scanned documents and validates
+            key fields to improve accuracy and reduce manual processing time.
+            -->
+
+            <article class="card research-card reveal">
+                <div class="research-icon"><i class="fas fa-shield-halved"></i></div>
+                <div class="research-body">
+                    <div class="research-meta">
+                        <span class="status-pill"><span class="pulse-dot"></span> In Progress</span>
+                        <span class="mono-note">Undergraduate Thesis · Team Project</span>
+                    </div>
+                    <h3 class="research-title">
+                        <span class="research-acronym">DigiDoc:</span> A Privacy-Preserving Distributed Document
+                        Digitization Framework for Automated Form Transcription
+                    </h3>
+                    <p class="research-summary">
+                        A full-stack framework that digitizes scanned application forms without exposing a complete
+                        document to any single reviewer. Each form is split into field-level segments, scored for
+                        sensitivity, and distributed across independent verifiers, who transcribe their portion with
+                        in-browser OCR assistance before the results are merged into one structured record.
+                    </p>
+
+                    <ol class="pipeline" aria-label="DigiDoc processing pipeline">
+                        <li><span class="pipe-icon"><i class="fas fa-file-pdf"></i></span><strong>Ingest</strong><small>PDF forms rendered to page images</small></li>
+                        <li><span class="pipe-icon"><i class="fas fa-vector-square"></i></span><strong>Annotate</strong><small>Field regions marked on reusable templates</small></li>
+                        <li><span class="pipe-icon"><i class="fas fa-gauge-high"></i></span><strong>Score</strong><small>Each field rated 1–10 for sensitivity</small></li>
+                        <li><span class="pipe-icon"><i class="fas fa-shuffle"></i></span><strong>Distribute</strong><small>Sensitivity groups sent to different verifiers</small></li>
+                        <li><span class="pipe-icon"><i class="fas fa-keyboard"></i></span><strong>Transcribe</strong><small>OCR suggests text, verifiers confirm</small></li>
+                        <li><span class="pipe-icon"><i class="fas fa-layer-group"></i></span><strong>Aggregate</strong><small>Segments merged into final data</small></li>
+                    </ol>
+
+                    <ul class="research-points">
+                        <li><strong>Privacy by design:</strong> fields are grouped by sensitivity score and each group
+                            is assigned to a different verifier, so no single person sees the whole form whenever
+                            enough verifiers are available.</li>
+                        <li><strong>Semantic sensitivity scoring:</strong> field labels are matched against a 10-tier
+                            scale, from critical identifiers (NID, bank account) down to document metadata, using
+                            MiniLM sentence embeddings, with human override and a lightweight token-similarity fallback.</li>
+                        <li><strong>In-browser OCR evaluation:</strong> Tesseract.js (WebAssembly) runs three
+                            preprocessing pipelines, including upscaling with Otsu binarization, compared against
+                            human transcriptions using CER, WER and Levenshtein edit analysis.</li>
+                        <li><strong>Workload-aware distribution:</strong> segment batches are cropped from source pages
+                            and assigned to the least-loaded eligible verifier.</li>
+                        <li><strong>Multi-tenant access control:</strong> organizations and branches with Super Admin,
+                            Branch Admin and Verifier roles, secured with JWT access/refresh tokens.</li>
+                        <li><strong>Deployment:</strong> containerized with Docker Compose; CI/CD with GitHub Actions,
+                            frontend on Vercel and backend on Render.</li>
+                    </ul>
+
+                    <div class="project-tech">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">FastAPI</span>
+                        <span class="tech-tag">PostgreSQL</span>
+                        <span class="tech-tag">SQLAlchemy</span>
+                        <span class="tech-tag">Next.js</span>
+                        <span class="tech-tag">React</span>
+                        <span class="tech-tag">TypeScript</span>
+                        <span class="tech-tag">Tailwind CSS</span>
+                        <span class="tech-tag">Tesseract.js</span>
+                        <span class="tech-tag">Sentence Transformers</span>
+                        <span class="tech-tag">PyMuPDF</span>
+                        <span class="tech-tag">Annotorious</span>
+                        <span class="tech-tag">Docker</span>
+                        <span class="tech-tag">GitHub Actions</span>
+                    </div>
+                </div>
+            </article>
+        </section>
 
         <!-- Achievements Section -->
-    <section id="achievements">
-      <h2 class="section-title">Achievements</h2>
-      
-      <h3 style="color: var(--primary-color); margin-bottom: 20px; font-size: 1.4rem; text-align: center;">
-        <i class="fas fa-code"></i> Competitive Programming Profiles
-      </h3>
-      <div class="grid grid-3">
-        <!-- Codeforces -->
-        <div class="card" style="text-align: center;">
-            <!-- Codeforces-style icon -->
-            <div style="display: flex; justify-content: center; align-items: flex-end; gap: 0.3rem; margin-bottom: 1rem; height: 2rem;">
-              <div style="width: 1rem; height: 1.5rem; background-color: #FFC107; border-radius: 0.2rem 0.2rem 0 0;"></div>
-              <div style="width: 1rem; height: 2rem; background-color: #2196F3; border-radius: 0.2rem 0.2rem 0 0;"></div>
-              <div style="width: 1rem; height: 1.2rem; background-color: #F44336; border-radius: 0.2rem 0.2rem 0 0;"></div>
+        <section id="achievements">
+            <div class="section-head reveal">
+                <span class="eyebrow"><span class="eyebrow-num">05</span> Achievements</span>
+                <h2 class="section-title">Achievements</h2>
+                <p class="section-subtitle">Competitive programming profiles, contest results and training.</p>
             </div>
 
-            <h3 style="color: var(--primary-color); margin-bottom: 0.5rem;">Codeforces</h3>
-            <p style="
-              display: inline-block;
-              background: rgba(33, 150, 243, 0.1);
-              color: #0eac1b;
-              padding: 0.35rem 0.75rem;
-              border-radius: 999px;
-              font-weight: 700;
-              margin-bottom: 0.6rem;
-            ">
-              ⭐ Max Rating: 1314
-            </p>
+            <h3 class="sub-title reveal"><i class="fas fa-code"></i> Competitive Programming Profiles</h3>
+            <div class="cp-grid">
+                <!-- Codeforces -->
+                <a class="cp-card reveal" href="https://codeforces.com/profile/Din_ED" target="_blank" rel="noopener"
+                    style="--brand: var(--cf);">
+                    <div class="cp-top">
+                        <div class="cp-logo">
+                            <!-- Codeforces-style icon -->
+                            <div class="cf-bars">
+                                <span style="height: 1.5rem; background-color: #FFC107;"></span>
+                                <span style="height: 2rem; background-color: #2196F3;"></span>
+                                <span style="height: 1.2rem; background-color: #F44336;"></span>
+                            </div>
+                        </div>
+                        <i class="fas fa-arrow-up-right-from-square cp-ext"></i>
+                    </div>
+                    <h4 class="cp-name">Codeforces</h4>
+                    <p class="cp-rating">⭐ Max Rating: 1314</p>
+                    <p class="cp-stat">Problems Solved: 1400+</p>
+                    <span class="cp-link">View Profile <i class="fas fa-external-link-alt"></i></span>
+                </a>
 
-            <p style="color: #666; margin-bottom: 1rem;">Problems Solved: 1250+</p>
-            <a href="https://codeforces.com/profile/Din_ED" target="_blank" style="color: var(--primary-color); font-weight: 600;">
-              View Profile <i class="fas fa-external-link-alt"></i>
+                <!-- CSES Card -->
+                <a class="cp-card reveal" href="http://cses.fi/user/155772" target="_blank" rel="noopener"
+                    style="--brand: var(--cses);">
+                    <div class="cp-top">
+                        <div class="cp-logo">
+                            <img src="images/cses_transparent.png" alt="CSES Logo" class="cses-logo">
+                        </div>
+                        <i class="fas fa-arrow-up-right-from-square cp-ext"></i>
+                    </div>
+                    <h4 class="cp-name">CSES</h4>
+                    <!-- <p style="color: #666; margin-bottom: 0.5rem;"><strong>Problem Solver</strong></p> -->
+                    <p class="cp-stat">Problems Solved: 167+</p>
+                    <p class="cp-stat">Submissions: 830+</p>
+                    <span class="cp-link">View Profile <i class="fas fa-external-link-alt"></i></span>
+                </a>
+
+                <!-- Leet Code -->
+                <a class="cp-card reveal" href="https://leetcode.com/u/Md_DinIslam/" target="_blank" rel="noopener"
+                    style="--brand: var(--lc);">
+                    <div class="cp-top">
+                        <div class="cp-logo">
+                            <!-- LeetCode-style icon -->
+                            <div class="lc-icon">
+                                <span class="lc-stem"></span>
+                                <span class="lc-top"></span>
+                                <span class="lc-bottom"></span>
+                                <span class="lc-dash"></span>
+                            </div>
+                        </div>
+                        <i class="fas fa-arrow-up-right-from-square cp-ext"></i>
+                    </div>
+                    <h4 class="cp-name">LeetCode</h4>
+                    <!-- <p style="color: #666; margin-bottom: 0.5rem;"><strong>Problem Solver</strong></p> -->
+                    <p class="cp-stat">Problems Solved: 70+</p>
+                    <span class="cp-link">View Profile <i class="fas fa-external-link-alt"></i></span>
+                </a>
+
+                <!-- CodeChef -->
+                <a class="cp-card reveal" href="https://www.codechef.com/users/mddinislam" target="_blank"
+                    rel="noopener" style="--brand: var(--cc);">
+                    <div class="cp-top">
+                        <div class="cp-logo">
+                            <!-- CodeChef Chef Hat Icon -->
+                            <span class="cc-icon">👨‍🍳</span>
+                        </div>
+                        <i class="fas fa-arrow-up-right-from-square cp-ext"></i>
+                    </div>
+                    <h4 class="cp-name">CodeChef</h4>
+                    <p class="cp-rating">⭐ 2★ | Max Rating: 1492</p>
+                    <p class="cp-stat">Problems Solved: 100+</p>
+                    <span class="cp-link">View Profile <i class="fas fa-external-link-alt"></i></span>
+                </a>
+            </div>
+
+            <h3 class="sub-title reveal"><i class="fas fa-trophy"></i> Contest Achievements</h3>
+
+            <div class="contest-grid">
+
+                <!-- ICPC-2025 Hosted by BUBT -->
+                <article class="contest-card contest-highlight reveal" style="--medal: #C0C0C0;">
+                    <div class="contest-rank">
+                        <i class="fas fa-award"></i>
+                        <span class="rank-label">207th Place</span>
+                    </div>
+                    <div class="contest-info">
+                        <span class="contest-tag">ICPC</span>
+                        <p class="contest-name">ICPC Asia Dhaka Regional Hosted By BUBT</p>
+                        <div class="contest-foot">
+                            <span class="contest-year">2025</span>
+                            <a href="https://bapsoj.org/contests/icpc-dhaka-onsite-2025/standings" target="_blank"
+                                rel="noopener">
+                                Green_MK <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- IUCPC-2025(Collaborative) at BUBT -->
+                <article class="contest-card reveal" style="--medal: #e29134;">
+                    <div class="contest-rank">
+                        <i class="fas fa-award"></i>
+                        <span class="rank-label">31st Place</span>
+                    </div>
+                    <div class="contest-info">
+                        <span class="contest-tag">IUCPC</span>
+                        <p class="contest-name">Inter University Collaborative Programming Contest
+                            <strong>(IUCPC)</strong> at BUBT</p>
+                        <div class="contest-foot">
+                            <span class="contest-year">2025</span>
+                            <a href="https://toph.co/c/bubt-inter-university-collaborative/standings" target="_blank"
+                                rel="noopener">
+                                Green_MK <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- IUPC-2025 at CUET -->
+                <article class="contest-card reveal" style="--medal: #C0C0C0;">
+                    <div class="contest-rank">
+                        <i class="fas fa-award"></i>
+                        <span class="rank-label">58th Place</span>
+                    </div>
+                    <div class="contest-info">
+                        <span class="contest-tag">IUPC</span>
+                        <p class="contest-name">Inter University Programming Contest <strong>(IUPC)</strong> at CUET</p>
+                        <div class="contest-foot">
+                            <span class="contest-year">2025</span>
+                            <a href="https://toph.co/c/cuet-iupc-2025/standings" target="_blank" rel="noopener">
+                                Green_MK <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- IUPC-2025 at Metropolitan University -->
+                <article class="contest-card reveal" style="--medal: #C0C0C0;">
+                    <div class="contest-rank">
+                        <i class="fas fa-award"></i>
+                        <span class="rank-label">50th Place</span>
+                    </div>
+                    <div class="contest-info">
+                        <span class="contest-tag">IUPC</span>
+                        <p class="contest-name">Inter University Programming Contest <strong>(IUPC)</strong> at
+                            Metropolitan University(Sylhet)</p>
+                        <div class="contest-foot">
+                            <span class="contest-year">2025</span>
+                            <a href="https://toph.co/c/inter-university-mu-cse-fest-2025/standings"
+                                target="_blank" rel="noopener">
+                                Green_MK <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- IUPC-2025 at Uttara University -->
+                <article class="contest-card reveal" style="--medal: #C0C0C0;">
+                    <div class="contest-rank">
+                        <i class="fas fa-award"></i>
+                        <span class="rank-label">63rd Place</span>
+                    </div>
+                    <div class="contest-info">
+                        <span class="contest-tag">IUPC</span>
+                        <p class="contest-name">Inter University Programming Contest <strong>(IUPC)</strong> at Uttara
+                            University</p>
+                        <div class="contest-foot">
+                            <span class="contest-year">2025</span>
+                            <a href="https://toph.co/c/uttara-university-inter-university-2025/standings"
+                                target="_blank" rel="noopener">
+                                GreenU_TripleQ <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- IDPC-2024 at GUB -->
+                <article class="contest-card reveal" style="--medal: #CD7F32;">
+                    <div class="contest-rank">
+                        <i class="fas fa-medal"></i>
+                        <span class="rank-label">4th Runner-Up</span>
+                    </div>
+                    <div class="contest-info">
+                        <span class="contest-tag">IDPC</span>
+                        <p class="contest-name">Inter Department Programming Contest <strong>(IDPC)</strong> at GUB</p>
+                        <div class="contest-foot">
+                            <span class="contest-year">2024</span>
+                            <a href="https://www.facebook.com/GreenUniversityComputerClub/posts/pfbid0QHKVGJ1cY4znjg3FUEq7WfGzxauF6ZnUdMCkgWx8FZHvcMwZkJm2cGv7VdayijBkl?rdid=4ktN1T82XFGv5V2G#"
+                                target="_blank" rel="noopener">
+                                View Facebook Post <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+
+            <div class="card cert-card reveal">
+                <h3 class="sub-title sub-title-left"><i class="fas fa-certificate"></i> Training &amp; Certifications
+                </h3>
+                <ul class="cert-list">
+                    <li><i class="fas fa-circle-check"></i> <span><strong>5+ Certificate</strong> – Participation at
+                            Inter University Programming Contest.</span></li>
+                    <li><i class="fas fa-circle-check"></i> <span><strong>Certificate on ICPC Asia Dhaka
+                                Regionalist.</strong></span></li>
+                    <!-- <li><i class="fas fa-check-circle" style="color: #28a745;"></i> <strong>5-Day In-Person AI/ML/IoT Bootcamp</strong> – Bondstein (2025)</li> -->
+                    <li><i class="fas fa-circle-check"></i> <span><strong>Competitive Programming Course</strong> – CPS
+                            Academy (2024)</span></li>
+                    <!-- <li><i class="fas fa-check-circle" style="color: #28a745;"></i> <strong>CSE Fundamentals</strong> – Phitron (2022)</li> -->
+                </ul>
+            </div>
+        </section>
+
+        <!-- Education -->
+        <section id="education">
+            <div class="section-head reveal">
+                <span class="eyebrow"><span class="eyebrow-num">06</span> Education</span>
+                <h2 class="section-title">Education</h2>
+            </div>
+
+            <div class="timeline">
+                <div class="education-card reveal">
+                    <span class="timeline-dot" aria-hidden="true"></span>
+                    <div class="education-header">
+                        <div>
+                            <h3 class="education-degree">B.Sc. in Computer Science and Engineering</h3>
+                            <p class="education-school"><i class="fas fa-building-columns"></i> Green University of
+                                Bangladesh</p>
+                        </div>
+                        <span class="education-date">Expected January 2027</span>
+                    </div>
+                    <p class="education-gpa">CGPA: 3.15/4.00 (3 Credit remaining)</p>
+                </div>
+
+                <div class="education-card reveal">
+                    <span class="timeline-dot" aria-hidden="true"></span>
+                    <div class="education-header">
+                        <div>
+                            <h3 class="education-degree">Higher Secondary Certificate (Science)</h3>
+                            <p class="education-school"><i class="fas fa-building-columns"></i> Uttara Sunrise College
+                            </p>
+                        </div>
+                        <span class="education-date">2020</span>
+                    </div>
+                    <p class="education-gpa">GPA: 4.50/5.00</p>
+                </div>
+
+                <!-- <div class="education-card">
+          <div class="education-header">
+            <div>
+              <h3 class="education-degree">Secondary School Certificate (Science)</h3>
+              <p class="education-school">Jagodishpur Mirzapur Ismail Secondary School</p>
+            </div>
+            <span class="education-date">2017</span>
+          </div>
+          <p class="education-gpa">GPA: 4.92/5.00</p>
+        </div> -->
+            </div>
+        </section>
+
+        <!-- References -->
+        <section id="references">
+            <div class="section-head reveal">
+                <span class="eyebrow"><span class="eyebrow-num">07</span> References</span>
+                <h2 class="section-title">Professional References</h2>
+            </div>
+
+            <div class="ref-grid">
+                <div class="card ref-card reveal">
+                    <div class="ref-avatar" aria-hidden="true">AH</div>
+                    <div>
+                        <h3 class="ref-name">Professor Dr. Md. Ahsan Habib</h3>
+                        <p class="ref-role"><strong>Chairperson</strong></p>
+                        <p class="ref-org">Department of Computer Science and Engineering<br>Green University of
+                            Bangladesh</p>
+                        <a class="ref-mail" href="mailto:mahabib@cse.green.edu.bd"><i class="fas fa-envelope"></i>
+                            mahabib@cse.green.edu.bd</a>
+                    </div>
+                </div>
+
+                <div class="card ref-card reveal">
+                    <div class="ref-avatar" aria-hidden="true">MA</div>
+                    <div>
+                        <h3 class="ref-name">Mr. Md. Ataullha</h3>
+                        <p class="ref-role"><strong>Lecturer</strong></p>
+                        <p class="ref-org">Department of Computer Science and Engineering<br>Green University of
+                            Bangladesh</p>
+                        <a class="ref-mail" href="mailto:ataullha@cse.green.edu.bd"><i class="fas fa-envelope"></i>
+                            ataullha@cse.green.edu.bd</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact">
+            <div class="contact-panel reveal">
+                <div class="contact-panel-bg" aria-hidden="true"></div>
+                <div class="section-head">
+                    <span class="eyebrow"><span class="eyebrow-num">08</span> Contact</span>
+                    <h2 class="section-title">Get In Touch</h2>
+                    <p class="section-subtitle">Let's connect and discuss your idea or other opportunities.</p>
+                </div>
+
+                <div class="contact-grid">
+                    <a class="contact-card" href="mailto:muhammaddinislam08@gmail.com">
+                        <span class="contact-icon"><i class="fas fa-envelope"></i></span>
+                        <span class="contact-label">Email</span>
+                        <span class="contact-value">muhammaddinislam08@gmail.com</span>
+                    </a>
+                    <a class="contact-card" href="tel:+8801930840806">
+                        <span class="contact-icon"><i class="fas fa-phone"></i></span>
+                        <span class="contact-label">Phone</span>
+                        <span class="contact-value">+880 193 084 0806</span>
+                    </a>
+                    <div class="contact-card">
+                        <span class="contact-icon"><i class="fas fa-location-dot"></i></span>
+                        <span class="contact-label">Location</span>
+                        <span class="contact-value">Gazipur, Dhaka, Bangladesh</span>
+                    </div>
+                </div>
+
+                <div class="btn-group btn-group-center">
+                    <a href="mailto:muhammaddinislam08@gmail.com" class="btn btn-primary"><i
+                            class="fas fa-paper-plane"></i> Send an Email</a>
+                    <a href="https://www.linkedin.com/in/mddinislam08/" target="_blank" rel="noopener"
+                        class="btn btn-secondary"><i class="fab fa-linkedin-in"></i> Connect on LinkedIn</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <a href="#" class="nav-logo footer-logo">
+                <span class="logo-mark">DI</span>
+                <span class="logo-text">Md. Din Islam</span>
             </a>
+            <div class="footer-social">
+                <a href="https://github.com/Md-DinIslam" target="_blank" rel="noopener" class="social-link"
+                    title="GitHub" aria-label="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/mddinislam08/" target="_blank" rel="noopener" class="social-link"
+                    title="LinkedIn" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="https://codeforces.com/profile/din_ed" target="_blank" rel="noopener" class="social-link"
+                    title="Codeforces" aria-label="Codeforces">
+                    <i class="fas fa-code"></i>
+                </a>
+                <a href="mailto:muhammaddinislam08@gmail.com" class="social-link" title="Email" aria-label="Email">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+            <div class="footer-meta">
+                <p class="footer-text">&copy; 2026 Md. Din Islam. All rights reserved.</p>
+                <p class="footer-text footer-updated">Last updated: January 2026</p>
+            </div>
         </div>
+    </footer>
 
+    <!-- Scroll to Top Button -->
+    <button class="scroll-top" id="scrollTop" type="button" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
 
-        <!-- CSES Card -->
-        <div class="card" style="text-align: center;">
-          <!-- CSES-style icon -->
-          <!-- <div style="display: flex; justify-content: center; align-items: flex-end; gap: 0.2rem; margin-bottom: 1rem; height: 2rem;">
-            <div style="width: 1rem; height: 2rem; background-color: #0066CC; border-radius: 0.2rem 0.2rem 0 0;"></div>
-            <div style="width: 0.5rem; height: 1.5rem; background-color: #004C99; border-radius: 0.2rem 0.2rem 0 0;"></div>
-          </div> -->
-
-           <div style="margin-bottom: 0.5rem;">
-        <img src="photo/cses_transparent.png" alt="CSES Logo" style="width: auto; height: 2.5rem;" />
-    </div>
-
-          <h3 style="color: var(--primary-color); margin-bottom: 0.5rem;">CSES</h3>
-          <!-- <p style="color: #666; margin-bottom: 0.5rem;"><strong>Problem Solver</strong></p> -->
-          <p style="color: #666; margin-bottom: 1rem;">Problems Solved: 167+
-            <br> Submissions: 830+</p>
-          <a href="http://cses.fi/user/155772" target="_blank" style="color: var(--primary-color); font-weight: 600;">
-            View Profile <i class="fas fa-external-link-alt"></i>
-          </a>
-        </div>
-        
-
-
-        <!-- Leet Code -->
-    <div class="card" style="text-align: center;">
-      <!-- LeetCode-style icon -->
-      <div style="position: relative; width: 2.2rem; height: 2.2rem; margin: 0 auto 1rem auto;">
-        
-        <!-- Black curved left -->
-        <div style="
-          position: absolute;
-          width: 0.45rem;
-          height: 2.2rem;
-          background-color: #000;
-          border-radius: 0.5rem;
-          transform: rotate(25deg);
-          left: 0.6rem;
-          top: 0;
-        "></div>
-
-        <!-- Orange top curve -->
-        <div style="
-          position: absolute;
-          width: 1.2rem;
-          height: 0.4rem;
-          background-color: #FFA116;
-          border-radius: 0.4rem;
-          transform: rotate(-20deg);
-          top: 0.3rem;
-          left: 0.9rem;
-        "></div>
-
-        <!-- Orange bottom curve -->
-        <div style="
-          position: absolute;
-          width: 1.2rem;
-          height: 0.4rem;
-          background-color: #FFA116;
-          border-radius: 0.4rem;
-          transform: rotate(20deg);
-          bottom: 0.3rem;
-          left: 0.9rem;
-        "></div>
-
-        <!-- Gray middle dash -->
-        <div style="
-          position: absolute;
-          width: 1.1rem;
-          height: 0.35rem;
-          background-color: #BDBDBD;
-          border-radius: 0.3rem;
-          top: 50%;
-          left: 1rem;
-          transform: translateY(-50%);
-        "></div>
-      </div>
-
-      <h3 style="color: var(--primary-color); margin-bottom: 0.5rem;">LeetCode</h3>
-      <!-- <p style="color: #666; margin-bottom: 0.5rem;"><strong>Problem Solver</strong></p> -->
-      <p style="color: #666; margin-bottom: 1rem;">Problems Solved: 70+</p>
-      <a href="https://leetcode.com/u/Md_DinIslam/" target="_blank" style="color: var(--primary-color); font-weight: 600;">
-        View Profile <i class="fas fa-external-link-alt"></i>
-      </a>
-    </div>
-
-    <!-- CodeChef -->
-    <div class="card" style="text-align: center;">
-    <!-- CodeChef Chef Hat Icon -->
-    <div style="font-size: 2rem; margin-bottom: 0.5rem;">
-        👨‍🍳
-    </div>
-
-    <h3 style="color: var(--primary-color); margin-bottom: 0.5rem;">CodeChef</h3>
-
-    <p style="
-        display: inline-block;
-        background: rgba(158, 102, 38, 0.1);
-        color: #30bdb6;
-        padding: 0.35rem 0.75rem;
-        border-radius: 999px;
-        font-weight: 700;
-        margin-bottom: 0.6rem;
-    ">
-        ⭐ 2★ | Max Rating: 1492
-    </p>
-
-      <p style="color: #666; margin-bottom: 1rem;">Problems Solved: 100+</p>
-      <a href="https://www.codechef.com/users/mddinislam" target="_blank" style="color: var(--primary-color); font-weight: 600;">
-          View Profile <i class="fas fa-external-link-alt"></i>
-      </a>
-    </div>  
-
-
-  </div>
-
-
-      <h3 style="color: var(--primary-color); margin: 40px 0 20px 0; font-size: 1.4rem; text-align: center;">
-        <i class="fas fa-trophy"></i> Contest Achievements
-      </h3>
-
-      <div class="grid grid-2">
-
-      <!-- ICPC-2025 Hosted by BUBT -->
-      <div class="card" style="text-align: center;">
-        <i class="fas fa-award" style="font-size: 2.5rem; color: #C0C0C0; margin-bottom: 1rem;"></i>
-        <h3 style="color: var(--primary-color); margin-bottom: 0.5rem;">207th Place</h3>
-        <p style="color: #666;">ICPC Asia Dhaka Regional Hosted By BUBT</p>
-        <p style="color: #999; font-size: 0.9rem;">2025</p>
-        <a href="https://bapsoj.org/contests/icpc-dhaka-onsite-2025/standings" target="_blank" style="color: var(--primary-color); font-weight: 600;">
-        Green_MK <i class="fas fa-external-link-alt"></i>
-      </a>
-      </div>
-
-      <!-- IUCPC-2025(Collaborative) at BUBT -->
-      <div class="card" style="text-align: center;">
-        <i class="fas fa-award" style="font-size: 2.5rem; color: #e29134; margin-bottom: 1rem;"></i>
-        <h3 style="color: var(--primary-color); margin-bottom: 0.5rem;">31st Place</h3>
-        <p style="color: #666;">Inter University Collaborative Programming Contest <strong>(IUCPC)</strong> at BUBT</p>
-        <p style="color: #999; font-size: 0.9rem;">2025</p>
-        <a href="https://toph.co/c/bubt-inter-university-collaborative/standings" target="_blank" style="color: var(--primary-color); font-weight: 600;">
-        Green_MK <i class="fas fa-external-link-alt"></i>
-      </a>
-      </div>
-
-      <!-- IUPC-2025 at CUET -->
-      <div class="card" style="text-align: center;">
-        <i class="fas fa-award" style="font-size: 2.5rem; color: #C0C0C0; margin-bottom: 1rem;"></i>
-        <h3 style="color: var(--primary-color); margin-bottom: 0.5rem;">58th Place</h3>
-        <p style="color: #666;">Inter University Programming Contest <strong>(IUPC)</strong> at CUET</p>
-        <p style="color: #999; font-size: 0.9rem;">2025</p>
-        <a href="https://toph.co/c/cuet-iupc-2025/standings" target="_blank" style="color: var(--primary-color); font-weight: 600;">
-        Green_MK <i class="fas fa-external-link-alt"></i>
-      </a>
-      </div>
-
-      <!-- IUPC-2025 at Metropolitan University -->
-      <div class="card" style="text-align: center;">
-        <i class="fas fa-award" style="font-size: 2.5rem; color: #C0C0C0; margin-bottom: 1rem;"></i>
-        <h3 style="color: var(--primary-color); margin-bottom: 0.5rem;">50th Place</h3>
-        <p style="color: #666;">Inter University Programming Contest <strong>(IUPC)</strong> at Metropolitan University(Sylhet)</p>
-        <p style="color: #999; font-size: 0.9rem;">2025</p>
-        <a href="https://toph.co/c/uttara-university-inter-university-2025/standings" target="_blank" style="color: var(--primary-color); font-weight: 600;">
-        Green_MK <i class="fas fa-external-link-alt"></i>
-      </a>
-      </div>
-
-      <!-- IUPC-2025 at Uttara University -->
-      <div class="card" style="text-align: center;">
-        <i class="fas fa-award" style="font-size: 2.5rem; color: #C0C0C0; margin-bottom: 1rem;"></i>
-        <h3 style="color: var(--primary-color); margin-bottom: 0.5rem;">63rd Place</h3>
-        <p style="color: #666;">Inter University Programming Contest <strong>(IUPC)</strong> at Uttara University</p>
-        <p style="color: #999; font-size: 0.9rem;">2025</p>
-        <a href="https://toph.co/c/uttara-university-inter-university-2025/standings" target="_blank" style="color: var(--primary-color); font-weight: 600;">
-        GreenU_TripleQ <i class="fas fa-external-link-alt"></i>
-      </a>
-      </div>
-
-      <!-- IDPC-2024 at GUB -->
-        <div class="card" style="text-align: center;">
-          <i class="fas fa-medal" style="font-size: 2.5rem; color: #CD7F32; margin-bottom: 1rem;"></i>
-          <h3 style="color: var(--primary-color); margin-bottom: 0.5rem;">4th Runner-Up</h3>
-          <p style="color: #666;">Inter Department Programming Contest <strong>(IDPC)</strong> at GUB</p>
-          <p style="color: #999; font-size: 0.9rem;">2024</p>
-          <a href="https://www.facebook.com/GreenUniversityComputerClub/posts/pfbid0QHKVGJ1cY4znjg3FUEq7WfGzxauF6ZnUdMCkgWx8FZHvcMwZkJm2cGv7VdayijBkl?rdid=4ktN1T82XFGv5V2G#" target="_blank" style="color: var(--primary-color); font-weight: 600;">
-        View Facebook Post <i class="fas fa-external-link-alt"></i>
-      </a>
-        </div>
-        
-      </div>
-
-      <div class="card" style="margin-top: 3rem;">
-        <h3 style="color: var(--primary-color); margin-bottom: 15px; font-size: 1.3rem;">
-          <i class="fas fa-certificate"></i> Training & Certifications
-        </h3>
-        <ul style="line-height: 2; color: #555; list-style: none; padding-left: 0;">
-          <li><i class="fas fa-check-circle" style="color: #28a745;"></i> <strong>5+ Certificate</strong> – Participation at Inter University Programming Contest.</li>
-          <li><i class="fas fa-check-circle" style="color: #28a745;"></i> <strong>Certificate on ICPC Asia Dhaka Regionalist.</strong></li>
-          <!-- <li><i class="fas fa-check-circle" style="color: #28a745;"></i> <strong>5-Day In-Person AI/ML/IoT Bootcamp</strong> – Bondstein (2025)</li> -->
-          <li><i class="fas fa-check-circle" style="color: #28a745;"></i> <strong>Competitive Programming Course</strong> – CPS Academy (2024)</li>
-          <!-- <li><i class="fas fa-check-circle" style="color: #28a745;"></i> <strong>CSE Fundamentals</strong> – Phitron (2022)</li> -->
-        </ul>
-      </div>
-    </section>
-
-    <!-- Education & Research -->
-    <section id="education">
-      <h2 class="section-title">Education</h2>
-      
-      <div class="education-card">
-        <div class="education-header">
-          <div>
-            <h3 class="education-degree">B.Sc. in Computer Science and Engineering</h3>
-            <p class="education-school">Green University of Bangladesh</p>
-          </div>
-          <span class="education-date">Expected January 2027</span>
-        </div>
-        <p class="education-gpa">CGPA: 3.15/4.00 (1 Semester remaining)</p>
-      </div>
-
-      <div class="education-card">
-        <div class="education-header">
-          <div>
-            <h3 class="education-degree">Higher Secondary Certificate (Science)</h3>
-            <p class="education-school">Uttara Sunrise College</p>
-          </div>
-          <span class="education-date">2020</span>
-        </div>
-        <p class="education-gpa">GPA: 4.50/5.00</p>
-      </div>
-
-      <!-- <div class="education-card">
-        <div class="education-header">
-          <div>
-            <h3 class="education-degree">Secondary School Certificate (Science)</h3>
-            <p class="education-school">Jagodishpur Mirzapur Ismail Secondary School</p>
-          </div>
-          <span class="education-date">2017</span>
-        </div>
-        <p class="education-gpa">GPA: 4.92/5.00</p>
-      </div> -->
-    </section>
-
-    <!-- References -->
-    <section id="references">
-      <h2 class="section-title">Professional References</h2>
-      <div class="grid grid-2">
-        <div class="card">
-          <h3 style="color: var(--primary-color); margin-bottom: 10px; font-size: 1.2rem;">
-            <!-- <a href="#" target="_blank" style="color: var(--primary-color);"> -->
-              Professor Dr. Md. Ahsan Habib
-            </a>
-          </h3>
-          <p style="line-height: 1.7; color: #555;">
-            <strong>Chairperson</strong><br>
-            Department of Computer Science and Engineering<br>
-            Green University of Bangladesh<br>
-            <i class="fas fa-envelope" style="color: var(--primary-color);"></i> 
-            <a href="mailto:mahabib@cse.green.edu.bd">mahabib@cse.green.edu.bd</a>
-          </p>
-        </div>
-
-        <div class="card">
-          <h3 style="color: var(--primary-color); margin-bottom: 10px; font-size: 1.2rem;">
-            Mr. Md. Ataullha
-          </h3>
-          <p style="line-height: 1.7; color: #555;">
-            <strong>Lecturer</strong><br>
-            Department of Computer Science and Engineering<br>
-            Green University of Bangladesh<br>
-            <i class="fas fa-envelope" style="color: var(--primary-color);"></i> 
-            <a href="mailto:ataullha@cse.green.edu.bd">ataullha@cse.green.edu.bd</a>
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact">
-      <h2 class="section-title">Get In Touch</h2>
-      <p class="section-subtitle">Let's connect and discuss your idea or other opportunities.</p>
-      <div class="grid grid-3" style="margin-top: 40px;">
-        <div class="card" style="text-align: center;">
-          <i class="fas fa-envelope" style="font-size: 2.5rem; color: var(--primary-color); margin-bottom: 15px;"></i>
-          <h3 style="margin-bottom: 10px;">Email</h3>
-          <a href="mailto:muhammaddinislam08@gmail.com" style="color: var(--primary-color); font-weight: 600;">
-            muhammaddinislam08@gmail.com
-          </a>
-        </div>
-        <div class="card" style="text-align: center;">
-          <i class="fas fa-phone" style="font-size: 2.5rem; color: var(--primary-color); margin-bottom: 15px;"></i>
-          <h3 style="margin-bottom: 10px;">Phone</h3>
-          <a href="tel:+8801746345484" style="color: var(--primary-color); font-weight: 600;">
-            +880 193 084 0806
-          </a>
-        </div>
-        <div class="card" style="text-align: center;">
-          <i class="fas fa-map-marker-alt" style="font-size: 2.5rem; color: var(--primary-color); margin-bottom: 15px;"></i>
-          <h3 style="margin-bottom: 10px;">Location</h3>
-          <p style="color: #666; font-weight: 600;">Gazipur, Dhaka, Bangladesh</p>
-        </div>
-      </div>
-    </section>
-  </div>
-
-  <!-- Footer -->
-  <footer>
-    <div class="footer-content">
-      <div class="footer-social">
-        <a href="https://github.com/Md-DinIslam" target="_blank" class="social-link" title="GitHub">
-          <i class="fab fa-github"></i>
-        </a>
-        <a href="https://www.linkedin.com/in/mddinislam08/" target="_blank" class="social-link" title="LinkedIn">
-          <i class="fab fa-linkedin-in"></i>
-        </a>
-        <a href="https://codeforces.com/profile/din_ed" target="_blank" class="social-link" title="Codeforces">
-          <i class="fas fa-code"></i>
-        </a>
-        <a href="mailto:muhammaddinislam08@gmail.com" class="social-link" title="Email">
-          <i class="fas fa-envelope"></i>
-        </a>
-      </div>
-      <p class="footer-text">
-        &copy; 2026 Md. Din Islam. All rights reserved.
-      </p>
-      <p class="footer-text" style="margin-top: 10px; font-size: 0.85rem;">
-        Last updated: January 2026
-      </p>
-    </div>
-  </footer>
-
-  <!-- Scroll to Top Button -->
-  <div class="scroll-top" id="scrollTop">
-    <i class="fas fa-arrow-up"></i>
-  </div>
-
-  <!-- Back to Top Button -->
-  <div class="back-to-top" id="backToTop">
-    <i class="fas fa-arrow-up"></i>
-  </div>
-
-  <!-- JavaScript -->
-  <script src="script.js"></script>
+    <!-- JavaScript -->
+    <script src="script.js"></script>
 
 </body>
+
 </html>
